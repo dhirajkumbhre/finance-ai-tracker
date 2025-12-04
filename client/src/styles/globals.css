@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global body background based on theme */
+body {
+  @apply bg-bgLight dark:bg-bgDark text-gray-900 dark:text-gray-100 transition-colors duration-300;
+}
+
+/* Card style utility */
+.card {
+  @apply bg-cardLight dark:bg-cardDark shadow-card rounded-xl p-6 transition-colors duration-300;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-xl font-medium transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primaryLight dark:bg-primaryDark dark:hover:bg-primary;
+}
+
+.btn-outline {
+  @apply border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300
+         hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+/* Input fields */
+.input {
+  @apply w-full p-2 border border-gray-300 dark:border-gray-600 rounded-xl
+         bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100;
+}
+
+/* Smooth transitions for dark mode */
+* {
+  transition-property: background-color, color, border-color;
+  transition-duration: 200ms;
+}
